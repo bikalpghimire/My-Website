@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <link href="styles.css" rel="stylesheet">
+  <title>Bikalp Ghimire</title>
+</head>
+
+<body>
+  <!-- <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+        <span class="fs-4">Bikalp Ghimire</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Resume</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+      </ul>
+    </header>
+  </div> -->
+  <nav class="navbar navbar-expand-sm bg-body-tertiary shadow">
+    <div class="container">
+      <a class="navbar-brand" href="#">Bikalp Ghimire</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <!-- <div class="col-lg-6">
+        <img src="canopy.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500"
+          loading="lazy">
+      </div> -->
+      <div id="carouselExampleCaptions" class="carousel slide col-lg-6">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="canopy.jpg" class="d-block w-100 rounded" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="blitz_tower.png" class="d-block w-100 rounded" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="jawalakhel.jpg" class="d-block w-100 rounded" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="la_school.png" class="d-block w-100 rounded" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Fourth slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-0" id="introduction2">Bikalp Ghimire</h1>
+        <h2 class="display-5 fw-bold text-body-emphasis lh-1 mt-0 mb-lg-4" id="introduction"></h2>
+        <p class="lead">Airport Planning, Structural Design (Steel and RCC), Project Management, Computer Programming</p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script>
+    let words = ['Civil Engineer', 'Programmer'];
+    let wordIndex = 0;
+    let letterIndex = 0;
+    let ifdelete = false;
+
+    function type_delete() {
+      let output = document.getElementById('introduction');
+      const prefix = "";
+      let cur_word = words[wordIndex];
+
+      if (ifdelete == false) {
+        if (letterIndex < cur_word.length) {
+          letterIndex++;
+          output.textContent = prefix + cur_word.slice(0, letterIndex);
+        } else {
+          ifdelete = true;
+          setTimeout(type_delete, 1000);
+          return;
+        }
+      } else {
+        if (letterIndex > 0) {
+          letterIndex--;
+          output.textContent = prefix + cur_word.slice(0, letterIndex);
+        } else {
+          ifdelete = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          letterIndex = 0;
+          setTimeout(type_delete, 500);
+          return;
+        }
+      }
+      if (ifdelete) {
+        setTimeout(type_delete, 50);
+      } else {
+        setTimeout(type_delete, 200);
+      }
+    }
+    type_delete();
+  </script>
+</body>
+
+</html>

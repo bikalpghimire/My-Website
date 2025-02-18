@@ -1,0 +1,33 @@
+#introduction {
+    color: teal;
+    font-family: Arial, Sans-serif ;
+    display: inline;
+    font-size: 30px;
+}
+
+#im {
+    color: grey;
+    font-family: Arial, Sans-serif ;
+    display: inline;
+    font-size: 30px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+body {
+    background-color: #c1e5e6;
+    background-image: url("https://transparenttextures.com/patterns/beige-paper.png");
+    font-family: Arial, sans-serif; /* Clean font */
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    font-family: Arial, Sans-serif ;
+    font-size: 60px;
+}
