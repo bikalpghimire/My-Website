@@ -31,3 +31,11 @@ h1 {
     font-family: Arial, Sans-serif ;
     font-size: 60px;
 }
+.card.shadow-sm {
+    height: 400px;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
