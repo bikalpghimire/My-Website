@@ -101,7 +101,7 @@ def contact():
                     <p><strong>Subject:</strong> {form.subject.data}</p>
                     <p>{form.message.data}</p>
                     <br>
-                    <p>Best regards,<br>The Team</p>
+                    <p>Best regards,<br>Bikalp Ghimire</p>
                 </body>
             </html>
             """
