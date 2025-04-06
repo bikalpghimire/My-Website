@@ -1,47 +1,101 @@
+
 {% extends "layout.html" %}
 
-{% block title %}Resume{% endblock %}
-  
+{% block title %}Contact{% endblock %}
+
 {% block content %}
-  <div class="container" style="margin-top: 20px;">
-    <h1>Contact Me</h1>
-    <p>Feel free to reach out to me for any queries or collaborations.</p>
-    <p>Email: bikalpghimire@gmail.com</p>
-    <p>Phone: +977-9860477581</p>
-    <p>Address: Kathmandu, Nepal</p> 
-    <p>Or you can fill out the form below to send me a message.</p>
-    <br>
-    <h2>Send me a message</h2>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-6 mb-5 mb-lg-0">
+      <h1 class="display-4 mb-4">Get In Touch</h1>
+      <p class="lead mb-4">Feel free to reach out for collaborations or inquiries. I'll get back to you as soon as possible.</p>
+      
+      <div class="contact-info mb-5">
+        <div class="d-flex align-items-center mb-3">
+          <i class="bi bi-envelope-fill fs-4 me-3 text-primary"></i>
+          <a href="mailto:bikalpghimire@gmail.com" class="text-decoration-none">bikalpghimire@gmail.com</a>
+        </div>
+        <div class="d-flex align-items-center mb-3">
+          <i class="bi bi-telephone-fill fs-4 me-3 text-primary"></i>
+          <a href="tel:+9779860477581" class="text-decoration-none">+977 9860477581</a>
+        </div>
+        <div class="d-flex align-items-start mb-3">
+          <i class="bi bi-geo-alt-fill fs-4 me-3 text-primary mt-1"></i>
+          <span>Kathmandu, Nepal</span>
+        </div>
+      </div>
+    </div>
 
-  {% with messages = get_flashed_messages(with_categories=true) %}
-  {% if messages %}
-    {% for category, message in messages %}
-      <div class="alert alert-{{ category }}">{{ message }}</div>
-    {% endfor %}
-  {% endif %}
-{% endwith %}
+    <div class="col-lg-6">
+      <div class="card shadow-sm">
+        <div class="card-body p-4">
+          <h2 class="mb-4">Send me a message</h2>
+          
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }} alert-dismissible fade show">
+                  {{ message }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
 
-
-    <form method="POST">
-      {{ form.hidden_tag() }}
-      <div class="mb-3">
-          {{ form.name.label(class="form-label") }}
-          {{ form.name(class="form-control") }}
+          <form method="POST" class="needs-validation" novalidate>
+            {{ form.hidden_tag() }}
+            
+            <div class="mb-3">
+              {{ form.name.label(class="form-label") }}
+              {{ form.name(class="form-control", placeholder="Your Name", required=true) }}
+              <div class="invalid-feedback">Please enter your name</div>
+            </div>
+            
+            <div class="mb-3">
+              {{ form.email.label(class="form-label") }}
+              {{ form.email(class="form-control", placeholder="your.email@example.com", required=true) }}
+              <div class="invalid-feedback">Please enter a valid email</div>
+            </div>
+            
+            <div class="mb-3">
+              {{ form.subject.label(class="form-label") }}
+              {{ form.subject(class="form-control", placeholder="Subject", required=true) }}
+              <div class="invalid-feedback">Please enter a subject</div>
+            </div>
+            
+            <div class="mb-3">
+              {{ form.message.label(class="form-label") }}
+              {{ form.message(class="form-control", rows="4", placeholder="Your message...", required=true) }}
+              <div class="invalid-feedback">Please enter your message</div>
+            </div>
+            
+            <div class="d-grid">
+              {{ form.submit(class="btn btn-primary py-2") }}
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="mb-3">
-          {{ form.email.label(class="form-label") }}
-          {{ form.email(class="form-control") }}
-      </div>
-      <div class="mb-3">
-          {{ form.subject.label(class="form-label") }}
-          {{ form.subject(class="form-control") }}
-      </div>
-      <div class="mb-3">
-          {{ form.message.label(class="form-label") }}
-          {{ form.message(class="form-control", rows="3") }}
-      </div>
-      {{ form.submit(class="btn btn-primary") }}
-  </form>
-  
+    </div>
   </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  // Form validation
+  (function() {
+    'use strict';
+    const forms = document.querySelectorAll('.needs-validation');
+    
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  })();
+</script>
 {% endblock %}

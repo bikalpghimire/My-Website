@@ -1,102 +1,128 @@
+
+
 {% extends "layout.html" %}
+
 {% block title %}Home{% endblock %}
+
 {% block content %}
-<div class="container">
-  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div id="carouselExampleCaptions" class="carousel slide col-lg-6">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+<section class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 order-lg-1 order-2">
+        <div class="name-container">
+          <h1 class="display-4 fw-bold mb-3">Bikalp Ghimire</h1>
+          <h2 class="mb-4" id="introduction"></h2>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="/static/assets/img/canopy.jpg" class="d-block w-100 rounded" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Tribhuvan International Airport</h5>
-              <p>Canopy Cover (Tensile Structure) over existing canopy.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="/static/assets/img/blitz_tower.png" class="d-block w-100 rounded" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Blitz Tower</h5>
-              <p>Structural Design of Seven Story Mercantile Building.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="/static/assets/img/jawalakhel.jpg" class="d-block w-100 rounded" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>KSNS Headquarters</h5>
-              <p>Structural Design of Kumar Shrestha Nirman Sewa Headquarters.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="/static/assets/img/la_school.png" class="d-block w-100 rounded" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5 style="color: black; background-color: whitesmoke">Little Angel's School</h5>
-              <p style="color: black; background-color: whitesmoke;">Structural Design of Little Angel's School.</p>
-            </div>
-          </div>
+        <p class="lead mb-4">Expert in Airport Planning, Structural Design, and Computer Programming</p>
+        <div class="d-flex gap-3">
+          <a href="/projects" class="btn btn-primary btn-lg px-4">View Projects</a>
+          <a href="/contact" class="btn btn-outline-primary btn-lg px-4">Contact Me</a>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-0" id="introduction2">Bikalp Ghimire</h1>
-        <h2 class="display-5 fw-bold text-body-emphasis lh-1 mt-0 mb-lg-4" id="introduction"></h2>
-        <p class="lead">Airport Planning, Structural Design,  Computer Programming</p>
+      <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
+        <div id="portfolioCarousel" class="carousel slide shadow-lg rounded" data-bs-ride="carousel" data-bs-interval="2000">
+          <div class="carousel-inner rounded">
+            <div class="carousel-item active">
+              <img src="/static/assets/img/rapid-exit-taxiway.png" class="d-block w-100" alt="Rapid Exit Taxiways">
+              <div class="carousel-caption">
+                <h5>Tribhuvan International Airport</h5>
+                <p>Rapid Exit Taxiways - Bravo and Charlie</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/static/assets/img/canopy.jpg" class="d-block w-100" alt="Tribhuvan International Airport Canopy">
+              <div class="carousel-caption">
+                <h5>Tribhuvan International Airport</h5>
+                <p>Canopy Cover (Tensile Structure) over existing canopy</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/static/assets/img/blitz_tower.png" class="d-block w-100" alt="Blitz Tower">
+              <div class="carousel-caption">
+                <h5>Blitz Tower</h5>
+                <p>Structural Design of Seven Story Mercantile Building</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
+    </div>
   </div>
-</div>
+</section>
+
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <div class="text-center p-4 shadow-sm rounded bg-light">
+          <i class="bi bi-airplane-engines fs-1 text-primary mb-3"></i>
+          <h3>Airport Planning</h3>
+          <p>Specialized in designing taxiways, aprons, and airport infrastructure with advanced simulation tools.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <div class="text-center p-4 shadow-sm rounded bg-light">
+          <i class="bi bi-building fs-1 text-primary mb-3"></i>
+          <h3>Structural Design</h3>
+          <p>Expertise in steel and concrete structures for commercial, institutional, and residential buildings.</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="text-center p-4 shadow-sm rounded bg-light">
+          <i class="bi bi-code-slash fs-1 text-primary mb-3"></i>
+          <h3>Programming</h3>
+          <p>Skilled in Python, web development, and creating engineering solutions through code.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}
 
 {% block scripts %}
-  <script>
-    let words = ['Civil Engineer', 'Programmer'];
-    let wordIndex = 0;
-    let letterIndex = 0;
-    let ifdelete = false;
+<script>
+  const professions = ['Civil Engineer', 'Structural Designer', 'Programmer'];
+  let currentProfession = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typingSpeed = 150;
+  const deletingSpeed = 50;
+  const pauseBetween = 1000;
 
-    function type_delete() {
-      let output = document.getElementById('introduction');
-      const prefix = "";
-      let cur_word = words[wordIndex];
-
-      if (ifdelete == false) {
-        if (letterIndex < cur_word.length) {
-          letterIndex++;
-          output.textContent = prefix + cur_word.slice(0, letterIndex);
-        } else {
-          ifdelete = true;
-          setTimeout(type_delete, 1000);
-          return;
-        }
-      } else {
-        if (letterIndex > 0) {
-          letterIndex--;
-          output.textContent = prefix + cur_word.slice(0, letterIndex);
-        } else {
-          ifdelete = false;
-          wordIndex = (wordIndex + 1) % words.length;
-          letterIndex = 0;
-          setTimeout(type_delete, 500);
-          return;
-        }
-      }
-      if (ifdelete) {
-        setTimeout(type_delete, 50);
-      } else {
-        setTimeout(type_delete, 200);
-      }
+  function typeProfession() {
+    const element = document.getElementById('introduction');
+    const currentText = professions[currentProfession];
+    
+    if (isDeleting) {
+      element.textContent = currentText.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      element.textContent = currentText.substring(0, charIndex + 1);
+      charIndex++;
     }
-    type_delete();
-  </script>
+
+    if (!isDeleting && charIndex === currentText.length) {
+      isDeleting = true;
+      setTimeout(typeProfession, pauseBetween);
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      currentProfession = (currentProfession + 1) % professions.length;
+      setTimeout(typeProfession, typingSpeed);
+    } else {
+      setTimeout(typeProfession, isDeleting ? deletingSpeed : typingSpeed);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(typeProfession, 1000);
+  });
+</script>
 {% endblock %}

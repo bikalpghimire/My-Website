@@ -46,14 +46,14 @@ def resume():
 def contact():
     form = ContactForm()
     if form.validate_on_submit():
-        # Access data with form.name.data, form.email.data, etc.
+        # Access data from the form
         print(f"Name: {form.name.data}")
         print(f"Email: {form.email.data}")
         print(f"Subject: {form.subject.data}")
         print(f"Message: {form.message.data}")
 
-        # Prepare the email message
-        msg = Message(
+        # Prepare the email to the site owner/admin
+        msg_to_admin = Message(
             subject=form.subject.data,
             recipients=[RECEIVER_EMAIL],
             body=f"""
@@ -61,7 +61,7 @@ def contact():
             Email: {form.email.data}
             Subject: {form.subject.data}
             Message: {form.message.data}
-            """,  # Plain text version of the email (for clients that don't support HTML)
+            """,
             html=f"""
             <html>
                 <body>
@@ -73,18 +73,51 @@ def contact():
                     <p>{form.message.data}</p>
                 </body>
             </html>
-            """  # HTML version of the email for better formatting
+            """
         )
-        
+
+        # Prepare the thank-you email to the user
+        msg_to_user = Message(
+            subject="Thank you for contacting us!",
+            recipients=[form.email.data],
+            body=f"""
+            Hi {form.name.data},
+
+            Thank you for reaching out to us. We have received your message and will get back to you as soon as possible.
+
+            Here's a summary of your message:
+            Subject: {form.subject.data}
+            Message: {form.message.data}
+
+            Best regards,
+            Bikalp Ghimire
+            """,
+            html=f"""
+            <html>
+                <body>
+                    <p>Hi {form.name.data},</p>
+                    <p>Thank you for reaching out to us. We have received your message and will get back to you as soon as possible.</p>
+                    <p><strong>Your message:</strong></p>
+                    <p><strong>Subject:</strong> {form.subject.data}</p>
+                    <p>{form.message.data}</p>
+                    <br>
+                    <p>Best regards,<br>The Team</p>
+                </body>
+            </html>
+            """
+        )
+
         try:
-            # Send the email
-            mail.send(msg)
-            flash('Message sent successfully!', 'success')
+            # Send both emails
+            mail.send(msg_to_admin)
+            mail.send(msg_to_user)
+            flash('Message sent successfully! A confirmation email has been sent to you.', 'success')
         except Exception as e:
             flash(f'Error sending message: {e}', 'danger')
 
         return redirect(url_for('contact'))
     return render_template("contact.html", form=form)
+
 
 
 if __name__ == '__main__':

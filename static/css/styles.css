@@ -1,41 +1,161 @@
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    padding-top: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .navbar {
+    padding: 1rem 0;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .hero-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  }
+
+  .name-container {
+    position: relative;
+    min-height: 60px; /* Adjust based on your font size */
+    margin-bottom: 3rem;
+  }
+
+  .name-title {
+    margin-bottom: 0.5rem;
+  }
+  
 #introduction {
-    color: teal;
-    font-family: Arial, Sans-serif ;
-    display: inline;
-    font-size: 30px;
+  position: absolute;
+  left: 0;
+  top: 100%; /* Positions right below your name */
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
 }
 
-#im {
-    color: grey;
-    font-family: Arial, Sans-serif ;
-    display: inline;
-    font-size: 30px;
-}
-
-.underline {
-    text-decoration: underline;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-body {
-    background-color: #c1e5e6;
-    background-image: url("https://transparenttextures.com/patterns/beige-paper.png");
-    font-family: Arial, sans-serif; /* Clean font */
-    margin: 0;
-    padding: 20px;
-}
-h1 {
-    font-family: Arial, Sans-serif ;
-    font-size: 60px;
-}
-.card.shadow-sm {
-    height: 400px;
-}
-
-.card-img-top {
-    height: 250px;
+  /* Responsive adjustments */
+@media (max-width: 768px) {
+    .name-container {
+      min-height: 50px;
+    }
+    #introduction {
+      font-size: 1.5rem;
+    }
+  }
+  .card {
+    transition: all 0.3s ease;
+    border: none;
+    margin-bottom: 1.5rem;
+    height: 100%;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  .card-img-top {
+    height: 200px;
     object-fit: cover;
-}
+    object-position: center;
+  }
+  
+  .carousel-caption {
+    background: rgba(0,0,0,0.7);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .carousel-caption h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .btn-primary {
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+  }
+  
+  .section-title {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+  }
+  
+  .skill-badge {
+    font-size: 0.9rem;
+    margin: 0.2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 3rem 0;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    #introduction {
+      font-size: 1.5rem;
+    }
+    .category-anchor {
+        top: -60px; /* Smaller offset for mobile */
+      }
+      .category-title {
+        font-size: 1.5rem;
+        margin: 1.5rem 0 1rem;
+      }
+  }
+
+  /* Category anchors and titles */
+.category-anchor {
+    position: relative;
+    top: -80px; /* Adjust based on your header height */
+    visibility: hidden;
+  }
+  
+  .category-title {
+    display: none; /* Hidden by default, shown when filtered */
+    width: 100%;
+    margin: 2rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    font-size: 1.8rem;
+    color: var(--dark-color);
+  }
+  
+  /* Smooth scrolling behavior */
+  html {
+    scroll-behavior: smooth;
+  }
