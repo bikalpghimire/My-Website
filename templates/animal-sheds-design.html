@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block title %}Animal Sheds Design{% endblock %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/projects">Projects</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Animal Sheds Design</li>
+      </ol>
+    </nav>
+
+    <h1 class="mb-3">Animal Sheds Design</h1>
+    <p class="text-muted mb-4">Other Project</p>
+
+    <img src="/static/assets/img/goat-shed.png" alt="Animal Sheds Design" class="img-fluid rounded shadow-sm mb-4">
+
+    <h4>Overview</h4>
+    <p>[[PLACEHOLDER: Project scope, regions, capacity ranges (goat/buffalo/cattle)]]</p>
+
+    <h4>Deliverables</h4>
+    <ul>
+      <li>Shop drawings (Plan, Elevation, Section, Typical Details)</li>
+      <li>3D animations</li>
+      <li>[[PLACEHOLDER: Any cost or build guidance]]</li>
+    </ul>
+
+    <a href="/projects" class="btn btn-outline-primary mt-3">Back to Projects</a>
+  </div>
+</section>
+{% endblock %}

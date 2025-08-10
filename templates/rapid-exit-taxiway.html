@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block title %}Rapid Exit Taxiway{% endblock %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/projects">Projects</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Rapid Exit Taxiway</li>
+      </ol>
+    </nav>
+
+    <h1 class="mb-3">Rapid Exit Taxiway</h1>
+    <p class="text-muted mb-4">Airport Design • Tribhuvan International Airport</p>
+
+    <img src="/static/assets/img/rapid-exit-taxiway.png" alt="Rapid Exit Taxiway" class="img-fluid rounded shadow-sm mb-4">
+
+    <div class="row g-4 mb-4">
+      <div class="col-md-6">
+        <h4>Overview</h4>
+        <p>[[PLACEHOLDER: Brief summary of project objectives and scope]]</p>
+      </div>
+      <div class="col-md-6">
+        <h4>Role & Tools</h4>
+        <ul class="mb-0">
+          <li><strong>Role:</strong> [[PLACEHOLDER: e.g., Airport Design Engineer]]</li>
+          <li><strong>Standards:</strong> ICAO Annex 14, FAA AC 150/5300-13A (as applicable)</li>
+          <li><strong>Software:</strong> REDIM, AutoCAD, Python (visualizations)</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4 class="mt-2">Design Highlights</h4>
+    <ul>
+      <li>[[PLACEHOLDER: RET location selection rationale and OOT reduction]]</li>
+      <li>[[PLACEHOLDER: Geometric design (exit angle, fillets, radii)]]</li>
+      <li>[[PLACEHOLDER: Simulation setup & key parameters]]</li>
+      <li>[[PLACEHOLDER: Results & operational benefits]]</li>
+    </ul>
+
+    <a href="/projects" class="btn btn-outline-primary mt-3"><i class="bi bi-arrow-left"></i> Back to Projects</a>
+  </div>
+</section>
+{% endblock %}

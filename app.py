@@ -38,6 +38,47 @@ def projects():
     return render_template('projects.html')
 
 
+@app.route('/projects/rapid-exit-taxiway')
+def project_rapid_exit_taxiway():
+    return render_template('rapid-exit-taxiway.html')
+
+@app.route('/projects/remote-apron-iapp')
+def project_remote_apron_iapp():
+    return render_template('remote-apron-iapp.html')
+
+@app.route('/projects/international-terminal-roof')
+def project_international_terminal_roof():
+    return render_template('international-terminal-roof.html')
+
+@app.route('/projects/shree-airlines-hangar')
+def project_shree_airlines_hangar():
+    return render_template('shree-airlines-hangar.html')
+
+@app.route('/projects/medi-pride-hospital')
+def project_medi_pride_hospital():
+    return render_template('medi-pride-hospital.html')
+
+@app.route('/projects/kushma-resort')
+def project_kushma_resort():
+    return render_template('kushma-resort.html')
+
+@app.route('/projects/little-angels-school')
+def project_little_angels_school():
+    return render_template('little-angels-school.html')
+
+@app.route('/projects/blitz-tower')
+def project_blitz_tower():
+    return render_template('blitz-tower.html')
+
+@app.route('/projects/ksns-headquarters')
+def project_ksns_headquarters():
+    return render_template('ksns-headquarters.html')
+
+@app.route('/projects/animal-sheds-design')
+def project_animal_sheds_design():
+    return render_template('animal-sheds-design.html')
+
+
 @app.route('/resume')
 def resume():
     return render_template('resume.html')
@@ -83,7 +124,7 @@ def contact():
             body=f"""
             Hi {form.name.data},
 
-            Thank you for reaching out to us. We have received your message and will get back to you as soon as possible.
+            Thank you for reaching out to me. I have received your message and will get back to you as soon as possible.
 
             Here's a summary of your message:
             Subject: {form.subject.data}
@@ -117,7 +158,6 @@ def contact():
 
         return redirect(url_for('contact'))
     return render_template("contact.html", form=form)
-
 
 
 if __name__ == '__main__':

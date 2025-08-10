@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block title %}Remote Apron & IAPP{% endblock %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/projects">Projects</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Remote Apron & IAPP</li>
+      </ol>
+    </nav>
+
+    <h1 class="mb-3">Remote Apron & Isolated Aircraft Parking Position</h1>
+    <p class="text-muted mb-4">Airport Design</p>
+
+    <img src="/static/assets/img/remote-apron_IAPP.png" alt="Remote Apron and IAPP" class="img-fluid rounded shadow-sm mb-4">
+
+    <h4>Overview</h4>
+    <p>[[PLACEHOLDER: Purpose, apron capacity, stand types, safety clearances]]</p>
+
+    <h4>Design Notes</h4>
+    <ul>
+      <li>[[PLACEHOLDER: Pavement design assumptions, shoulders, fillets]]</li>
+      <li>[[PLACEHOLDER: Tug routes, GSE roads, markings, lighting]]</li>
+      <li>[[PLACEHOLDER: Access taxiways and separation minima]]</li>
+    </ul>
+
+    <a href="/projects" class="btn btn-outline-primary mt-3">Back to Projects</a>
+  </div>
+</section>
+{% endblock %}

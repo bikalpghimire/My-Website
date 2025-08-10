@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}Shree Airlines Hangar{% endblock %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/projects">Projects</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Shree Airlines Hangar</li>
+      </ol>
+    </nav>
+
+    <h1 class="mb-3">Shree Airlines Hangar</h1>
+    <p class="text-muted mb-4">Building Structure</p>
+
+    <img src="/static/assets/img/shree-hangar.png" alt="Shree Airlines Hangar" class="img-fluid rounded shadow-sm mb-4">
+
+    <h4>Overview</h4>
+    <p>[[PLACEHOLDER: Span, clear height, door system, aircraft capacity (A321 or two Mi-16)]]</p>
+
+    <h4>Structural Notes</h4>
+    <ul>
+      <li>[[PLACEHOLDER: Framing system, lateral system, foundations]]</li>
+      <li>[[PLACEHOLDER: Crane loads (if any), service bays, MEP coordination]]</li>
+    </ul>
+
+    <a href="/projects" class="btn btn-outline-primary mt-3">Back to Projects</a>
+  </div>
+</section>
+{% endblock %}

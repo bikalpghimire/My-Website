@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}Medi-Pride Hospital{% endblock %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/projects">Projects</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Medi-Pride Hospital</li>
+      </ol>
+    </nav>
+
+    <h1 class="mb-3">Medi-Pride Hospital</h1>
+    <p class="text-muted mb-4">Building Structure</p>
+
+    <img src="/static/assets/img/medi-pride.png" alt="Medi-Pride Hospital" class="img-fluid rounded shadow-sm mb-4">
+
+    <h4>Overview</h4>
+    <p>[[PLACEHOLDER: Number of beds, functional layout drivers, seismic design category]]</p>
+
+    <h4>Structural Design</h4>
+    <ul>
+      <li>[[PLACEHOLDER: System (steel/composite), diaphragm, vertical/lateral systems]]</li>
+      <li>[[PLACEHOLDER: Key design checks & serviceability]]</li>
+    </ul>
+
+    <a href="/projects" class="btn btn-outline-primary mt-3">Back to Projects</a>
+  </div>
+</section>
+{% endblock %}

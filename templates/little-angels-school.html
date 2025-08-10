@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}Little Angel's School{% endblock %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/projects">Projects</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Little Angel's School</li>
+      </ol>
+    </nav>
+
+    <h1 class="mb-3">Little Angel's School</h1>
+    <p class="text-muted mb-4">Building Structure</p>
+
+    <img src="/static/assets/img/la_school.png" alt="Little Angel's School" class="img-fluid rounded shadow-sm mb-4">
+
+    <h4>Overview</h4>
+    <p>[[PLACEHOLDER: 6-storey school program, occupancy, egress, seismic category]]</p>
+
+    <h4>Engineering Notes</h4>
+    <ul>
+      <li>[[PLACEHOLDER: Gravity/lateral systems, drift targets]]</li>
+      <li>[[PLACEHOLDER: Detailing for robustness]]</li>
+    </ul>
+
+    <a href="/projects" class="btn btn-outline-primary mt-3">Back to Projects</a>
+  </div>
+</section>
+{% endblock %}
