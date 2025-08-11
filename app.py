@@ -137,7 +137,7 @@ def contact():
             <html>
                 <body>
                     <p>Hi {form.name.data},</p>
-                    <p>Thank you for reaching out to us. We have received your message and will get back to you as soon as possible.</p>
+                    <p>Thank you for reaching out to me. I have received your message and will get back to you as soon as possible.</p>
                     <p><strong>Your message:</strong></p>
                     <p><strong>Subject:</strong> {form.subject.data}</p>
                     <p>{form.message.data}</p>
