@@ -1,30 +1,30 @@
 {% extends "layout.html" %}
 {% block title %}KSNS Headquarters{% endblock %}
 {% block content %}
-<section class="py-5">
+<section class="py-5 bg-light">
   <div class="container">
-    <nav aria-label="breadcrumb" class="mb-4">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/projects">Projects</a></li>
-        <li class="breadcrumb-item active" aria-current="page">KSNS Headquarters</li>
-      </ol>
-    </nav>
-
-    <h1 class="mb-3">KSNS Headquarters</h1>
-    <p class="text-muted mb-4">Building Structure</p>
-
-    <img src="/static/assets/img/jawalakhel.jpg" alt="KSNS Headquarters" class="img-fluid rounded shadow-sm mb-4">
-
-    <h4>Overview</h4>
-    <p>[[PLACEHOLDER: Corporate building, 7-storey configuration, floor plate]]</p>
-
-    <h4>Engineering Summary</h4>
-    <ul>
-      <li>[[PLACEHOLDER: System & materials]]</li>
-      <li>[[PLACEHOLDER: Notable connection/details, façade coordination]]</li>
-    </ul>
-
-    <a href="/projects" class="btn btn-outline-primary mt-3">Back to Projects</a>
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4">
+        <img src="/static/assets/img/jawalakhel.jpg" alt="KSNS Headquarters" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="mb-3">KSNS Headquarters (7‑Storey Corporate)</h1>
+        <h5 class="text-muted">Building Structures</h5>
+        <hr>
+        <h3>Overview</h3>
+        <p>Corporate HQ structure, with studio apartments on upper floors, facade integration and rooftop services.</p>
+        <h3 class="mt-4">Key Responsibilities & Contribution</h3>
+        <ul>
+          <li>Earthquake resistant design according to Nepalese and Indian Standards. (modeled in ETABS)</li>
+          <li>Produced shop drawings (plans, elevations, sections) and typical details.</li>
+          <li>Coordinated with architects and MEP consultants during the design process to satisfy 
+            all the requirements and come up with innovative structural solutions.</li>
+          <li>Delivered calculation sets, GA drawings, and rebar schedules.</li>
+          <li>Jury Presentation at the municipality office to get building approved for construction.</li>
+        </ul>
+        <a href="/projects" class="btn btn-outline-primary mt-3"><i class="bi bi-arrow-left"></i> Back to Projects</a>
+      </div>
+    </div>
   </div>
 </section>
 {% endblock %}

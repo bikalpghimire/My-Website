@@ -1,31 +1,28 @@
 {% extends "layout.html" %}
 {% block title %}Kushma Resort{% endblock %}
 {% block content %}
-<section class="py-5">
+<section class="py-5 bg-light">
   <div class="container">
-    <nav aria-label="breadcrumb" class="mb-4">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/projects">Projects</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Kushma Resort</li>
-      </ol>
-    </nav>
-
-    <h1 class="mb-3">Kushma Resort</h1>
-    <p class="text-muted mb-4">Building Structure</p>
-
-    <img src="/static/assets/img/kusma-resort.png" alt="Kushma Resort" class="img-fluid rounded shadow-sm mb-4">
-
-    <h4>Overview</h4>
-    <p>[[PLACEHOLDER: Semi-circular 3-storey concept, site constraints, views/wind]]</p>
-
-    <h4>Highlights</h4>
-    <ul>
-      <li>[[PLACEHOLDER: Curved framing strategy]]</li>
-      <li>[[PLACEHOLDER: Lateral stability approach]]</li>
-      <li>[[PLACEHOLDER: Foundations & soil notes]]</li>
-    </ul>
-
-    <a href="/projects" class="btn btn-outline-primary mt-3">Back to Projects</a>
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4">
+        <img src="/static/assets/img/kusma-resort.png" alt="Kushma Resort" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="mb-3">Kushma Resort (Semi‑Circular, 3‑Storey Steel)</h1>
+        <h5 class="text-muted">Building Structures</h5>
+        <hr>
+        <h3>Overview</h3>
+        <p>Structural design of a mid‑rise hotel building.</p>
+        <h3 class="mt-4">Key Responsibilities & Contribution</h3>
+        <ul>
+          <li>Designed gravity/lateral systems (beams, composite slabs, braced frames) as per Nepal and Indian Standards.</li>
+          <li>Performed structural member (ETABS) and connection design (IdeaStatica).</li>
+          <li>Prepared structural drawings and reports for municipal approvals.</li>
+          <li>Modeled the building in Revit and prepared shop drawings.</li>
+        </ul>
+        <a href="/projects" class="btn btn-outline-primary mt-3"><i class="bi bi-arrow-left"></i> Back to Projects</a>
+      </div>
+    </div>
   </div>
 </section>
 {% endblock %}

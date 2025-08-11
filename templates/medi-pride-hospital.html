@@ -1,30 +1,28 @@
 {% extends "layout.html" %}
-{% block title %}Medi-Pride Hospital{% endblock %}
+{% block title %}Medi‑Pride Hospital{% endblock %}
 {% block content %}
-<section class="py-5">
+<section class="py-5 bg-light">
   <div class="container">
-    <nav aria-label="breadcrumb" class="mb-4">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/projects">Projects</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Medi-Pride Hospital</li>
-      </ol>
-    </nav>
-
-    <h1 class="mb-3">Medi-Pride Hospital</h1>
-    <p class="text-muted mb-4">Building Structure</p>
-
-    <img src="/static/assets/img/medi-pride.png" alt="Medi-Pride Hospital" class="img-fluid rounded shadow-sm mb-4">
-
-    <h4>Overview</h4>
-    <p>[[PLACEHOLDER: Number of beds, functional layout drivers, seismic design category]]</p>
-
-    <h4>Structural Design</h4>
-    <ul>
-      <li>[[PLACEHOLDER: System (steel/composite), diaphragm, vertical/lateral systems]]</li>
-      <li>[[PLACEHOLDER: Key design checks & serviceability]]</li>
-    </ul>
-
-    <a href="/projects" class="btn btn-outline-primary mt-3">Back to Projects</a>
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4">
+        <img src="/static/assets/img/medi-pride.png" alt="Medi-Pride Hospital" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="mb-3">Medi‑Pride Hospital (3‑Storey Steel)</h1>
+        <h5 class="text-muted">Building Structures</h5>
+        <hr>
+        <h3>Overview</h3>
+        <p>Structural design of a mid‑rise hospital block.</p>
+        <h3 class="mt-4">Key Responsibilities & Contribution</h3>
+        <ul>
+          <li>Designed gravity/lateral systems (beams, composite slabs, braced frames) as per Nepal and Indian Standards.</li>
+          <li>Performed structural member (ETABS) and connection design (IdeaStatica).</li>
+          <li>Prepared structural drawings and reports for municipal approvals.</li>
+          <li>Modeled the building in Revit and prepared shop drawings.</li>
+        </ul>
+        <a href="/projects" class="btn btn-outline-primary mt-3"><i class="bi bi-arrow-left"></i> Back to Projects</a>
+      </div>
+    </div>
   </div>
 </section>
 {% endblock %}

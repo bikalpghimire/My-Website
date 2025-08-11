@@ -1,31 +1,29 @@
 {% extends "layout.html" %}
 {% block title %}International Terminal Roof{% endblock %}
 {% block content %}
-<section class="py-5">
+<section class="py-5 bg-light">
   <div class="container">
-    <nav aria-label="breadcrumb" class="mb-4">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/projects">Projects</a></li>
-        <li class="breadcrumb-item active" aria-current="page">International Terminal Roof</li>
-      </ol>
-    </nav>
-
-    <h1 class="mb-3">International Terminal Roof — Tensile Structure</h1>
-    <p class="text-muted mb-4">Airport Design</p>
-
-    <img src="/static/assets/img/canopy.jpg" alt="International Terminal Roof" class="img-fluid rounded shadow-sm mb-4">
-
-    <h4>Overview</h4>
-    <p>[[PLACEHOLDER: Scope, interface with existing roof, aesthetic & functional goals]]</p>
-
-    <h4>Key Considerations</h4>
-    <ul>
-      <li>[[PLACEHOLDER: Structural system, wind & seismic checks]]</li>
-      <li>[[PLACEHOLDER: Materials and connections]]</li>
-      <li>[[PLACEHOLDER: Construction sequencing / access]]</li>
-    </ul>
-
-    <a href="/projects" class="btn btn-outline-primary mt-3">Back to Projects</a>
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4">
+        <img src="/static/assets/img/canopy.jpg" alt="International Terminal Roof" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="mb-3">International Terminal Roof (Tensile Steel Canopy)</h1>
+        <h5 class="text-muted">Building Structures</h5>
+        <hr>
+        <h3>Overview</h3>
+        <p>Architectural/structural design of proposed tensile steel canopy to be installed above the existing international terminal entrance to provide 
+          weather protection, integrating with existing columns and utilities.</p>
+        <h3 class="mt-4">Key Responsibilities & Contribution</h3>
+        <ul>
+          <li>Produced architectural conceptual 3D renderings.</li>
+          <li>Designed structural system and member sizings for gravity, wind and earthquake loads.</li>
+          <li>Designed connections and anchorage to existing columns.</li>
+          <li>Detailed guttering, drip edges, and concealed drainage to prevent façade staining.</li>
+        </ul>
+        <a href="/projects" class="btn btn-outline-primary mt-3"><i class="bi bi-arrow-left"></i> Back to Projects</a>
+      </div>
+    </div>
   </div>
 </section>
 {% endblock %}

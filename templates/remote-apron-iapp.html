@@ -1,31 +1,29 @@
 {% extends "layout.html" %}
 {% block title %}Remote Apron & IAPP{% endblock %}
 {% block content %}
-<section class="py-5">
+<section class="py-5 bg-light">
   <div class="container">
-    <nav aria-label="breadcrumb" class="mb-4">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/projects">Projects</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Remote Apron & IAPP</li>
-      </ol>
-    </nav>
-
-    <h1 class="mb-3">Remote Apron & Isolated Aircraft Parking Position</h1>
-    <p class="text-muted mb-4">Airport Design</p>
-
-    <img src="/static/assets/img/remote-apron_IAPP.png" alt="Remote Apron and IAPP" class="img-fluid rounded shadow-sm mb-4">
-
-    <h4>Overview</h4>
-    <p>[[PLACEHOLDER: Purpose, apron capacity, stand types, safety clearances]]</p>
-
-    <h4>Design Notes</h4>
-    <ul>
-      <li>[[PLACEHOLDER: Pavement design assumptions, shoulders, fillets]]</li>
-      <li>[[PLACEHOLDER: Tug routes, GSE roads, markings, lighting]]</li>
-      <li>[[PLACEHOLDER: Access taxiways and separation minima]]</li>
-    </ul>
-
-    <a href="/projects" class="btn btn-outline-primary mt-3">Back to Projects</a>
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4">
+        <img src="/static/assets/img/remote-apron_IAPP.png" alt="Remote Apron & IAPP" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="mb-3">Remote Apron & Isolated Aircraft Parking Position (IAPP)</h1>
+        <h5 class="text-muted">Airport Design</h5>
+        <hr>
+        <h3>Overview</h3>
+        <p>Planning and geometric design of a remote aircraft apron and an Isolated Aircraft Parking Position (IAPP), including connecting taxiways and 
+          GSE road, ensuring ICAO standards.</p>
+        <h3 class="mt-4">Key Responsibilities & Contribution</h3>
+        <ul>
+          <li>Sized stands for the critical aircraft, set stand centerlines, and equipment clearances; laid out taxilane geometry and fillets.</li>
+          <li>Prepared Obstacle Limitation Surfaces (OLS) and checked the clearances for high masts, buildings, aprons, etc.</li>
+          <li>Developed pavement marking and lighting concepts per ICAO/FAA guidance.</li>
+          <li>Conceptual design of Storm Water Drainage System along with grading of Runway and Taxiway Strip</li>
+        </ul>
+        <a href="/projects" class="btn btn-outline-primary mt-3"><i class="bi bi-arrow-left"></i> Back to Projects</a>
+      </div>
+    </div>
   </div>
 </section>
 {% endblock %}

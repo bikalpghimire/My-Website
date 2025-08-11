@@ -1,30 +1,27 @@
 {% extends "layout.html" %}
 {% block title %}Shree Airlines Hangar{% endblock %}
 {% block content %}
-<section class="py-5">
+<section class="py-5 bg-light">
   <div class="container">
-    <nav aria-label="breadcrumb" class="mb-4">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/projects">Projects</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Shree Airlines Hangar</li>
-      </ol>
-    </nav>
-
-    <h1 class="mb-3">Shree Airlines Hangar</h1>
-    <p class="text-muted mb-4">Building Structure</p>
-
-    <img src="/static/assets/img/shree-hangar.png" alt="Shree Airlines Hangar" class="img-fluid rounded shadow-sm mb-4">
-
-    <h4>Overview</h4>
-    <p>[[PLACEHOLDER: Span, clear height, door system, aircraft capacity (A321 or two Mi-16)]]</p>
-
-    <h4>Structural Notes</h4>
-    <ul>
-      <li>[[PLACEHOLDER: Framing system, lateral system, foundations]]</li>
-      <li>[[PLACEHOLDER: Crane loads (if any), service bays, MEP coordination]]</li>
-    </ul>
-
-    <a href="/projects" class="btn btn-outline-primary mt-3">Back to Projects</a>
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4">
+        <img src="/static/assets/img/shree-hangar.png" alt="Shree Airlines Hangar" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="mb-3">Shree Airlines Hangar</h1>
+        <h5 class="text-muted">Building Structures</h5>
+        <hr>
+        <h3>Overview</h3>
+        <p>Concept/architectural and preliminary structural design of a hangar capable of accommodating one Airbus A321 or two Mi‑16 helicopters.</p>
+        <h3 class="mt-4">Key Responsibilities & Contribution</h3>
+        <ul>
+          <li>Designed mezzanine floor layouts within the hangar to accommodate mechanical rooms, workshops, storage areas, and engineers’ offices.</li>
+          <li>Produced conceptual plans, elevations, and 3D for client approvals.</li>
+          <li>Selected structural system, bay spacing, and roof purlin layout.</li>
+        </ul>
+        <a href="/projects" class="btn btn-outline-primary mt-3"><i class="bi bi-arrow-left"></i> Back to Projects</a>
+      </div>
+    </div>
   </div>
 </section>
 {% endblock %}
