@@ -82,7 +82,7 @@ def contact():
         message = form.message.data
 
         msg_to_admin = {
-            "from": "My Website <noreply@bikalpghimire.com.np>",
+            "from": "My Website <bikalp@bikalpghimire.com.np>",
             "to": ["bikalpghimire@gmail.com"],
             "subject": f"New Contact Form Submission: {subject}",
             "html": f"""
@@ -96,7 +96,7 @@ def contact():
         }
 
         msg_to_user = {
-            "from": "Bikalp <noreply@bikalpghimire.com.np>",
+            "from": "Bikalp <bikalp@bikalpghimire.com.np>",
             "to": [email],
             "subject": "Thank you for contacting me!",
             "html": f"""
