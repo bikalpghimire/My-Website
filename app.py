@@ -9,9 +9,6 @@ load_dotenv()
 
 
 APP_SECRET_KEY = os.getenv('APP_SECRET_KEY')
-SENDER_EMAIL = os.getenv('SENDER_EMAIL')
-SENDER_PASSWORD = os.getenv('SENDER_PASSWORD')
-RECEIVER_EMAIL = os.getenv('RECEIVER_EMAIL')
 resend.api_key = os.getenv('RESEND_API_KEY')
 
 # Initialize the Flask application
@@ -19,16 +16,6 @@ app = Flask(__name__)
 
 app.secret_key = APP_SECRET_KEY
 
-# # Flask-Mail Configuration
-# app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-# app.config['MAIL_PORT'] = 587
-# app.config['MAIL_USE_TLS'] = True
-# app.config['MAIL_USERNAME'] = SENDER_EMAIL
-# app.config['MAIL_PASSWORD'] = SENDER_PASSWORD
-# app.config['MAIL_DEFAULT_SENDER'] = SENDER_EMAIL
-
-# Initialize Flask-Mail
-# mail = Mail(app)
 
 @app.route('/')
 def home():
