@@ -3,6 +3,7 @@ from forms import ContactForm
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
 import os
+import resend
 
 load_dotenv()
 
@@ -11,22 +12,23 @@ APP_SECRET_KEY = os.getenv('APP_SECRET_KEY')
 SENDER_EMAIL = os.getenv('SENDER_EMAIL')
 SENDER_PASSWORD = os.getenv('SENDER_PASSWORD')
 RECEIVER_EMAIL = os.getenv('RECEIVER_EMAIL')
+resend.api_key = os.getenv('RESEND_API_KEY')
 
 # Initialize the Flask application
 app = Flask(__name__)
 
 app.secret_key = APP_SECRET_KEY
 
-# Flask-Mail Configuration
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = SENDER_EMAIL
-app.config['MAIL_PASSWORD'] = SENDER_PASSWORD
-app.config['MAIL_DEFAULT_SENDER'] = SENDER_EMAIL
+# # Flask-Mail Configuration
+# app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+# app.config['MAIL_PORT'] = 587
+# app.config['MAIL_USE_TLS'] = True
+# app.config['MAIL_USERNAME'] = SENDER_EMAIL
+# app.config['MAIL_PASSWORD'] = SENDER_PASSWORD
+# app.config['MAIL_DEFAULT_SENDER'] = SENDER_EMAIL
 
 # Initialize Flask-Mail
-mail = Mail(app)
+# mail = Mail(app)
 
 @app.route('/')
 def home():
@@ -87,76 +89,47 @@ def resume():
 def contact():
     form = ContactForm()
     if form.validate_on_submit():
-        # Access data from the form
-        print(f"Name: {form.name.data}")
-        print(f"Email: {form.email.data}")
-        print(f"Subject: {form.subject.data}")
-        print(f"Message: {form.message.data}")
+        name = form.name.data
+        email = form.email.data
+        subject = form.subject.data
+        message = form.message.data
 
-        # Prepare the email to the site owner/admin
-        msg_to_admin = Message(
-            subject=form.subject.data,
-            recipients=[RECEIVER_EMAIL],
-            body=f"""
-            Name: {form.name.data}
-            Email: {form.email.data}
-            Subject: {form.subject.data}
-            Message: {form.message.data}
+        msg_to_admin = {
+            "from": "My Website <noreply@bikalpghimire.com.np>",
+            "to": ["bikalpghimire@gmail.com"],
+            "subject": f"New Contact Form Submission: {subject}",
+            "html": f"""
+                <h2>Contact Form Submission</h2>
+                <p><strong>Name:</strong> {name}</p>
+                <p><strong>Email:</strong> {email}</p>
+                <p><strong>Subject:</strong> {subject}</p>
+                <p><strong>Message:</strong></p>
+                <p>{message}</p>
             """,
-            html=f"""
-            <html>
-                <body>
-                    <h2>Contact Form Submission</h2>
-                    <p><strong>Name:</strong> {form.name.data}</p>
-                    <p><strong>Email:</strong> {form.email.data}</p>
-                    <p><strong>Subject:</strong> {form.subject.data}</p>
-                    <p><strong>Message:</strong></p>
-                    <p>{form.message.data}</p>
-                </body>
-            </html>
-            """
-        )
+        }
 
-        # Prepare the thank-you email to the user
-        msg_to_user = Message(
-            subject="Thank you for contacting us!",
-            recipients=[form.email.data],
-            body=f"""
-            Hi {form.name.data},
-
-            Thank you for reaching out to me. I have received your message and will get back to you as soon as possible.
-
-            Here's a summary of your message:
-            Subject: {form.subject.data}
-            Message: {form.message.data}
-
-            Best regards,
-            Bikalp Ghimire
+        msg_to_user = {
+            "from": "Bikalp <noreply@bikalpghimire.com.np>",
+            "to": [email],
+            "subject": "Thank you for contacting me!",
+            "html": f"""
+                <p>Hi {name},</p>
+                <p>Thank you for reaching out. I’ve received your message and will get back to you soon.</p>
+                <p><strong>Your message:</strong> {message}</p>
+                <br>
+                <p>Best regards,<br><b>Bikalp Ghimire</b></p>
             """,
-            html=f"""
-            <html>
-                <body>
-                    <p>Hi {form.name.data},</p>
-                    <p>Thank you for reaching out to me. I have received your message and will get back to you as soon as possible.</p>
-                    <p><strong>Your message:</strong></p>
-                    <p><strong>Subject:</strong> {form.subject.data}</p>
-                    <p>{form.message.data}</p>
-                    <br>
-                    <p>Best regards,<br>Bikalp Ghimire</p>
-                </body>
-            </html>
-            """
-        )
+        }
 
         try:
-            # Send both emails
-            mail.send(msg_to_admin)
-            mail.send(msg_to_user)
-            flash('Message sent successfully! A confirmation email has been sent to you.', 'success')
+            resend.Emails.send(msg_to_admin)
+            resend.Emails.send(msg_to_user)
+            flash('✅ Message sent successfully!', 'success')
         except Exception as e:
-            flash(f'Error sending message: {e}', 'danger')
+            flash(f'❌ Error sending message: {e}', 'danger')
 
         return redirect(url_for('contact'))
+
     return render_template("contact.html", form=form)
 
 
