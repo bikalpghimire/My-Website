@@ -111,9 +111,9 @@ def contact():
         try:
             resend.Emails.send(msg_to_admin)
             resend.Emails.send(msg_to_user)
-            flash('✅ Message sent successfully!', 'success')
+            flash('Message sent successfully!', 'success')
         except Exception as e:
-            flash(f'❌ Error sending message: {e}', 'danger')
+            flash(f'Error sending message: {e}', 'danger')
 
         return redirect(url_for('contact'))
 
